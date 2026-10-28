@@ -1,8 +1,9 @@
 # ELMABench
 
-Official code for [ELMA: Benchmarking Anaphoric Compositions for Long-Term Text-to-Motion Generation](https://arxiv.org/abs/2610.13549).
-The ELMA dataset is available on Hugging Face: [shun31y/ELMA](https://huggingface.co/datasets/shun31y/ELMA).
 ![ELMABench](Image/ELMABench.png)
+
+Official code for [ELMA: Benchmarking Anaphoric Compositions for Long-Term Text-to-Motion Generation](https://arxiv.org/abs/2610.13549).
+
 ## Main Files
 
 - [`FlowMDM/README.md`](./FlowMDM/README.md): detailed `FlowMDM` setup instructions
