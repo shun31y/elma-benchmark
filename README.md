@@ -1,5 +1,6 @@
-# ELMA Benchmark
+# ELMABench
 
+Official code for [ELMA: Benchmarking Anaphoric Compositions for Long-Term Text-to-Motion Generation](https://arxiv.org/abs/2610.13549).
 ![ELMABench](Image/ELMABench.png)
 ## Main Files
 
