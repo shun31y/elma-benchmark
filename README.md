@@ -1,6 +1,7 @@
 # ELMABench
 
 Official code for [ELMA: Benchmarking Anaphoric Compositions for Long-Term Text-to-Motion Generation](https://arxiv.org/abs/2610.13549).
+The ELMA dataset is available on Hugging Face: [shun31y/ELMA](https://huggingface.co/datasets/shun31y/ELMA).
 ![ELMABench](Image/ELMABench.png)
 ## Main Files
 
@@ -34,11 +35,21 @@ cd /path/to/elma-benchmark
 bash scripts/setup_flowmdm_env.sh
 ```
 
-3. Link ELMA/HML3D into `FlowMDM/dataset` as HumanML3D.
+3. Download ELMA/HML3D from [Hugging Face](https://huggingface.co/datasets/shun31y/ELMA) and link it into `FlowMDM/dataset` as HumanML3D.
+
+`HML3D.tar` (~12 GB) is the HumanML3D-format export used by all experiments. `--revision v1.0`
+pins the exact data used in the paper. The `hf` CLI comes from `huggingface_hub`; install it
+outside `FlowMDM/.venv`, which pins an older version.
 
 ```bash
+pip install -U huggingface_hub
+hf download shun31y/ELMA HML3D.tar --repo-type dataset --revision v1.0 --local-dir /path/to/ELMA
+tar -xf /path/to/ELMA/HML3D.tar -C /path/to/ELMA && rm /path/to/ELMA/HML3D.tar
 ln -s /path/to/ELMA/HML3D ./FlowMDM/dataset/HumanML3D
 ```
+
+The full dataset (SMPL motion, captions and dependency annotations, ~151 GB) is described on the
+[dataset page](https://huggingface.co/datasets/shun31y/ELMA); it is not needed to run the baselines.
 
 At minimum, the linked dataset root must contain:
 
@@ -53,7 +64,6 @@ At minimum, the linked dataset root must contain:
 - `texts/`
 - `new_joint_vecs/`
 - `new_joints/`
-- `t2m/`
 
 4. Prepare the SMPL body model files.
 
