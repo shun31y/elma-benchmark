@@ -1,3 +1,5 @@
+# ELMA Benchmark
+
 ![ELMABench](Image/ELMABench.png)
 ## Main Files
 
@@ -7,6 +9,13 @@
 - [`scripts/prepare_flowmdm_assets.sh`](./scripts/prepare_flowmdm_assets.sh): downloads GloVe, evaluator support files, and pretrained models
 - [`scripts/eval_test_anaphora_hist.sh`](./scripts/eval_test_anaphora_hist.sh): runs `test_anaphora` evaluation with the history-text model
 - [`scripts/eval_test_anaphora_nohist.sh`](./scripts/eval_test_anaphora_nohist.sh): runs `test_anaphora` evaluation with the no-history model
+
+## Clone the Repository
+
+```bash
+git clone https://github.com/shun31y/elma-benchmark.git
+cd elma-benchmark
+```
 
 ## Environment Setup
 
@@ -20,7 +29,7 @@ sudo apt install -y ffmpeg git unzip
 2. Create `FlowMDM/.venv`.
 
 ```bash
-cd /path/to/benchmark-code
+cd /path/to/elma-benchmark
 bash scripts/setup_flowmdm_env.sh
 ```
 
@@ -51,7 +60,7 @@ These files are **not redistributed** in our release archives.
 The expected setup is that each user prepares `body_models/` separately, for example by running the upstream download script:
 
 ```bash
-cd /path/to/benchmark-code/FlowMDM
+cd /path/to/elma-benchmark/FlowMDM
 bash runners/prepare/download_smpl_files.sh
 ```
 
@@ -61,7 +70,7 @@ bash runners/prepare/download_smpl_files.sh
 export FLOWMDM_SUPPORT_FILES_URL="https://drive.google.com/file/d/1-XqEum8HNNiMMbyiiMygIvDWylHjbpl8/view?usp=sharing"
 export FLOWMDM_PRETRAINED_MODELS_URL="https://drive.google.com/file/d/1ZEHOOl3avMxgX_12ycagVj0_1oRz0r3q/view?usp=drive_link"
 
-cd /path/to/benchmark-code
+cd /path/to/elma-benchmark
 bash scripts/prepare_flowmdm_assets.sh
 ```
 
@@ -82,14 +91,14 @@ The wrapper scripts are fixed to the following checkpoints:
 ### History-text Model
 
 ```bash
-cd /path/to/benchmark-code
+cd /path/to/elma-benchmark
 GPU_ID=0 EVAL_MODE=final bash scripts/eval_test_anaphora_hist.sh
 ```
 
 ### No-History Model
 
 ```bash
-cd /path/to/benchmark-code
+cd /path/to/elma-benchmark
 GPU_ID=0 EVAL_MODE=final bash scripts/eval_test_anaphora_nohist.sh
 ```
 

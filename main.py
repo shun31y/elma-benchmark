@@ -1,5 +1,5 @@
 def main():
-    print("Hello from elmabench-dev!")
+    print("Hello from elma-benchmark!")
 
 
 if __name__ == "__main__":

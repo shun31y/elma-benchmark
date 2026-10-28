@@ -82,7 +82,7 @@ No-history model:
   --eval_file ./dataset/HumanML3D/humanml_test_set_anaphora.json
 ```
 
-If you are using the outer `benchmark-code` repository, wrapper scripts are available at `../../scripts/eval_test_anaphora_hist.sh` and `../../scripts/eval_test_anaphora_nohist.sh`.
+If you are using the outer `elma-benchmark` repository, wrapper scripts are available at `../../scripts/eval_test_anaphora_hist.sh` and `../../scripts/eval_test_anaphora_nohist.sh`.
 
 ### HumanML3D anaphora full-generation evaluation
 

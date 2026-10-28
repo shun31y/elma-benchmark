@@ -1,7 +1,7 @@
 [project]
-name = "elmabench-dev"
+name = "elma-benchmark"
 version = "0.1.0"
-description = "Add your description here"
+description = "Benchmark code for ELMA: long-term text-to-motion generation with anaphoric compositions."
 readme = "README.md"
 requires-python = ">=3.10"
 dependencies = []
